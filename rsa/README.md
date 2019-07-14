@@ -45,12 +45,9 @@ Wrote a [python script](solve.py) to brute force the `e`:
 for e in range(65537):
 	d = inverse(e,phi)
 	m = pow(c,d,n)
-	text = hex(m)[2:].replace('L','')			# remove the 'L' in last character
-	if len(text) % 2 != 0:						
-		text = '0'+text						# If length not even add a '0' infront
-	if text.decode('hex').startswith("InnoCTF"):
+	if long_to_bytes(m).startswith("InnoCTF"):
 		print "e = " + str(e)
-		print text.decode('hex')
+		print long_to_bytes(m)
 ```
 After couple seconds, found **e = 47131** and decrypted the flag!
 

@@ -1,4 +1,4 @@
-from Crypto.Util.number import inverse
+from Crypto.Util.number import inverse,long_to_bytes
 n = 1522605027922533360535618378132637429718068114961380688657908494580122963258952897654000350692006139
 p = 37975227936943673922808872755445627854565536638199
 q = 40094690950920881030683735292761468389214899724061
@@ -8,9 +8,6 @@ phi = (p-1)*(q-1)
 for e in range(65537):
 	d = inverse(e,phi)
 	m = pow(c,d,n)
-	text = hex(m)[2:].replace('L','')
-	if len(text) % 2 != 0:
-		text = '0'+text
-	if text.decode('hex').startswith("InnoCTF"):
+	if long_to_bytes(m).startswith("InnoCTF"):
 		print "e = " + str(e)
-		print text.decode('hex')
+		print long_to_bytes(m)
