@@ -57,6 +57,7 @@ Then I realized its use all color channel (RGB) and combine them
 Alternately, you can just use [Stegsolve.jar](https://github.com/eugenekolo/sec-tools/tree/master/stego/stegsolve/stegsolve)
 
 Change the filter to Full red, green and blue:
+
 ![red](red.bmp)
 ![green](green.bmp)
 ![blue](blue.bmp)
