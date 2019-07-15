@@ -54,5 +54,20 @@ QR-Code:HrtIC4lyls3DL}
 ```
 Then I realized its use all color channel (RGB) and combine them
 
+Alternately, you can just use [Stegsolve.jar](https://github.com/eugenekolo/sec-tools/tree/master/stego/stegsolve/stegsolve)
+
+Change the filter to Full red, green and blue:
+![red](red.bmp)
+![green](green.bmp)
+![blue](blue.bmp)
+
+And `zbarimg` gets the same result:
+```
+# zbarimg red.bmp green.bmp blue.bmp
+QR-Code:InnoCTF{N9GntE
+QR-Code:Pyy5mNT3VvjbpC
+QR-Code:HrtIC4lyls3DL}
+```
+
 # Flag
 > InnoCTF{N9GntEPyy5mNT3VvjbpCHrtIC4lyls3DL}
